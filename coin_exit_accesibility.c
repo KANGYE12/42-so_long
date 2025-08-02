@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 15:21:40 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/02 14:11:26 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/02 16:30:55 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ static char	**copy_map(char **map, int height)
 
 static void	flood_fill(char **map, int x, int y, t_game *game)
 {
-	if (map[y][x] == '1' || map[y][x] == 'V')
+	if (map[y][x] == '1' || map[y][x] == 'V' || map[y][x] == 'E')
 		return ;
 	if (map[y][x] == 'C')
 		game->reachable_coins++;
@@ -54,10 +54,8 @@ void	possible_path(t_game *game)
 		error_message("THE MAP WAS NOT WELL COPIED", game);
 	flood_fill(copy_of_map, game->position_x, game->position_y, game);
 	if (game->reachable_coins != game->coins_total)
-		error_message("IS NOT POSSIBLE TO ACCESS ALL THE COINS",
-			game);
+		error_message("IS NOT POSSIBLE TO ACCESS ALL THE COINS", game);
 	if (game->reachable_exit != 1)
-		error_message("IS NOT POSSIBLE TO ACCESS THE EXIT",
-			game);
+		error_message("IS NOT POSSIBLE TO ACCESS THE EXIT", game);
 	free_map(copy_of_map, game->height);
 }
