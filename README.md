@@ -79,6 +79,7 @@ You can create your own maps! Just make sure they follow these strict rules:
 | `D` or `→`    | Move player right  | 👉🏻         |
 | `ESC`         | Exit the game      | 🚪         |
 
+<img width="1220" height="851" alt="so_long_image" src="https://github.com/user-attachments/assets/e9c1cab5-9242-4e23-aeda-aad5f1403689" />
 ---
 
 ## 🧑‍💻 Author
@@ -86,3 +87,4 @@ You can create your own maps! Just make sure they follow these strict rules:
 -   **KANGYE** - [KANGYE12](https://github.com/KANGYE12)
 
 ---
+
