@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 15:21:40 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/03 15:08:53 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/03 17:00:05 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,8 @@ static char	**copy_map(char **map, int height)
 
 static void	flood_fill(char **map, int x, int y, t_game *game)
 {
+	if (x < 0 || y < 0 || y >= game->height || x >= game->width)
+		return ;
 	if (map[y][x] == '1' || map[y][x] == 'V')
 		return ;
 	if (map[y][x] == 'C')
