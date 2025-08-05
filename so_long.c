@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/23 16:03:19 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/02 14:05:49 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/05 13:52:35 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int	main(int argc, char **argv)
 	game.reachable_coins = 0;
 	game.reachable_exit = 0;
 	check_args_and_init(argv, &game);
-	ft_printf("Total coins %d", game.coins_total);
+	ft_printf("Total coins %d\n", game.coins_total);
 	game.mlx = mlx_init();
 	game.win = mlx_new_window(game.mlx, game.width * TILE_SIZE, game.height
 			* TILE_SIZE, "so_long");
