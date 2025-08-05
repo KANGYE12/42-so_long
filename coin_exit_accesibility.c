@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/31 15:21:40 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/03 17:00:05 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/05 15:34:57 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,11 +56,20 @@ void	possible_path(t_game *game)
 
 	copy_of_map = copy_map(game->map, game->height);
 	if (!copy_of_map)
+	{
+		free_map(copy_of_map, game->height);
 		error_message("THE MAP WAS NOT WELL COPIED", game);
+	}
 	flood_fill(copy_of_map, game->position_x, game->position_y, game);
 	if (game->reachable_coins != game->coins_total)
+	{
+		free_map(copy_of_map, game->height);
 		error_message("IS NOT POSSIBLE TO ACCESS ALL THE COINS", game);
+	}
 	if (game->reachable_exit != 1)
+	{
+		free_map(copy_of_map, game->height);
 		error_message("IS NOT POSSIBLE TO ACCESS THE EXIT", game);
-	free_map(copy_of_map, game->height);
+	}
+	
 }

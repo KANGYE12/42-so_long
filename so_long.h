@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.h                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/08/05 15:08:15 by kanye             #+#    #+#             */
+/*   Updated: 2025/08/05 15:08:33 by kanye            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
@@ -22,9 +34,9 @@
 
 typedef struct s_game
 {
-	char **map;
-	int width;
-	int height;
+	char	**map;
+	int		width;
+	int		height;
 	int		moves;
 	int		position_x;
 	int		position_y;

@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 12:33:10 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/02 13:42:00 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/05 15:34:03 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void	clean_up_game(t_game *game)
 			mlx_destroy_image(game->mlx, game->wall);
 	}
 	game->player = NULL;
-	game->coins = NULL;
+	game->coins = NULL;	
 	game->exit = NULL;
 	game->floor = NULL;
 	game->wall = NULL;
