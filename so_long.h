@@ -12,7 +12,7 @@
 
 # define ERROR 0
 # define SUCCESS 1
-# define TILE_SIZE 64 // each tile has 64 pixels wide and 64 pixels tall
+# define TILE_SIZE 64
 
 # define KEY_W 119
 # define KEY_S 115
@@ -22,9 +22,9 @@
 
 typedef struct s_game
 {
-	char **map; // a matrix used to track the map.ber
-	int width;  // colums for the map
-	int height; // rows for the map
+	char **map;
+	int width;
+	int height;
 	int		moves;
 	int		position_x;
 	int		position_y;
