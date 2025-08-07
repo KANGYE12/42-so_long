@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/30 12:33:10 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/05 15:34:03 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/07 13:29:18 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -95,22 +95,18 @@ void	clean_up_game(t_game *game)
 			mlx_destroy_image(game->mlx, game->floor);
 		if (game->wall)
 			mlx_destroy_image(game->mlx, game->wall);
-	}
-	game->player = NULL;
-	game->coins = NULL;	
-	game->exit = NULL;
-	game->floor = NULL;
-	game->wall = NULL;
-	if (game->win)
-	{
-		mlx_destroy_window(game->mlx, game->win);
-		game->win = NULL;
+		if (game->win)
+			mlx_destroy_window(game->mlx, game->win);
+		mlx_destroy_display(game->mlx);
+		free(game->mlx);
 	}
 }
 
 int	close_window_hook(t_game *game)
 {
 	ft_printf("\nCLOSE THE WINDOWS PRESSING THE X BUTTON\n");
+	if (game && game->map)
+		free_map(game->map, game->height);
 	clean_up_game(game);
 	exit(EXIT_SUCCESS);
 	return (0);

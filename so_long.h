@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/05 15:08:15 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/05 15:08:33 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/06 14:06:43 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -80,4 +80,5 @@ int			count_lines(char *filename);
 void		possible_path(t_game *game);
 void		clean_up_game(t_game *game);
 int			close_window_hook(t_game *game);
+void		load_all_sprites(t_game *game);
 #endif

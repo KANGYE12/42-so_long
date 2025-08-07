@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/07/22 15:26:54 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/02 13:42:20 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/06 14:50:30 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	error_message(char *message, t_game *game)
 {
-	ft_putendl_fd(message, 1);
+	ft_printf("%s\n", message);
 	clean_up_game(game);
 	free_map(game->map, game->height);
 	exit(1);

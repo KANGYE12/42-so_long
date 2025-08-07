@@ -6,7 +6,7 @@
 /*   By: kanye <kanye@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/02 13:38:44 by kanye             #+#    #+#             */
-/*   Updated: 2025/08/02 14:00:06 by kanye            ###   ########.fr       */
+/*   Updated: 2025/08/07 13:28:44 by kanye            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static void	*load_sprite(t_game *game, char *filename)
 	return (sprite);
 }
 
-static void	load_all_sprites(t_game *game)
+void	load_all_sprites(t_game *game)
 {
 	game->player = load_sprite(game, "sprites/slime.xpm");
 	game->coins = load_sprite(game, "sprites/coin.xpm");
@@ -70,7 +70,6 @@ void	load_map(t_game *game)
 	int	row;
 	int	column;
 
-	load_all_sprites(game);
 	row = 0;
 	while (row < game->height)
 	{

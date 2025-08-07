@@ -44,7 +44,7 @@ $(GNL_OBJS): %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME): $(OBJS) $(GNL_OBJS) $(LIBFT) $(PRINTF) $(MINILIBX_LIB)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(GNL_OBJS) $(LIBFT) $(PRINTF) $(MINILIBX_FLAGS) -no-pie
+	$(CC) $(CFLAGS) -o $(NAME) $(OBJS) $(GNL_OBJS) $(LIBFT) $(PRINTF) $(MINILIBX_FLAGS)
 
 clean:
 	@rm -rf $(OBJ_DIR)
